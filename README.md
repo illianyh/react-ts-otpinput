@@ -9,7 +9,7 @@ There are tons of OTP (one-time password) or OTC (one-time code) inputs I have s
 ## Quick Start
 1. Clone the app:
 ```bash
-git clone git@github.com:dominicarrojado/react-typescript-otp-input.git
+git clone git@github.com:illianyh/react-ts-otpinput.git
 ```
 
 2. Install dependencies:
