@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import OTPInput from "./components/OTPInput";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    const [otpValue, setOtpValue] = useState("");
+    const onChange = (value: string) => setOtpValue(value);
+
+    return (
+        <div className="container">
+            <h1>OTP Input</h1>
+            <p>Functionalites:</p>
+            <ul>
+                <li>
+                    Pasting value that has the same length as the OTP inputs
+                </li>
+                <li>
+                    Using arrow keys: <i>up</i>, <i>down</i>, <i>left</i>,{" "}
+                    <i>up</i>
+                </li>
+                <li>Change single input value without changing other inputs</li>
+            </ul>
+            <OTPInput value={otpValue} numOfInputs={6} onChange={onChange} />
+        </div>
+    );
 }
-
-export default App;
